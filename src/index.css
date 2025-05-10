@@ -1,0 +1,32 @@
+@import "tailwindcss";
+
+* {
+  font-family: "Helvetica Neue", sans-serif;
+}
+
+:root {
+  --yell: #ffebd2;
+  --black: #23242a;
+}
+
+html {
+  background: var(--yell);
+  color: var(--black);
+}
+body {
+  min-height: 100vh;
+}
+
+.txt__b_sm {
+  @apply text-[24px] leading-[130%] tracking-[2%] font-[700];
+}
+.txt__b_md {
+  @apply text-[28px] leading-[120%] tracking-[1%] font-[700];
+}
+
+.txt__h_sm {
+  @apply text-[32px] leading-[120%] tracking-[3%] font-[400];
+}
+.txt__h_md {
+  @apply text-[48px] leading-[100%] tracking-[4.5%] font-[400];
+}
