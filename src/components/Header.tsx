@@ -5,7 +5,7 @@ const Header: FC = () => {
     <div className="w-full grid grid-cols-1 justify-items-center gap-[24px] max-w-[650px]">
       {/* TITLE */}
       <div className="w-full flex justify-center">
-        <h1 className="txt__h_md text-center">Meet the team</h1>
+        <h1 className="txt__h_lg text-center">Meet the team</h1>
       </div>
       {/* SUB_TITLE */}
       <div className="w-full flex justify-center">
