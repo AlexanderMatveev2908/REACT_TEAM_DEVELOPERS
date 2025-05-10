@@ -16,8 +16,6 @@ const CardDev: FC<PropsType> = ({ el }) => {
         {isImg ? (
           <img
             src={el.img}
-            width={"100%"}
-            height={"100%"}
             alt={`img of ${el.name}`}
             className="object-cover w-full h-full object-top"
           />
