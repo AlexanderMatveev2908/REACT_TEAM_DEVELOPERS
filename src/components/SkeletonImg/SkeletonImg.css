@@ -1,0 +1,19 @@
+@import "tailwindcss";
+
+.skeleton {
+  background: #222;
+  animation: make_skeleton 1s ease-in-out infinite;
+  opacity: 0.5;
+}
+
+@keyframes make_skeleton {
+  0% {
+    opacity: 0.4;
+  }
+  50% {
+    opacity: 0.6;
+  }
+  100% {
+    opacity: 0.4;
+  }
+}

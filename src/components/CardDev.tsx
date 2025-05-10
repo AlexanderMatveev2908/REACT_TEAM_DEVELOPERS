@@ -1,19 +1,34 @@
-import type { FC } from "react";
+import { useState, type FC } from "react";
 import type { PersonType } from "../config/fieldsData";
+import SkeletonImg from "./SkeletonImg/SkeletonImg";
 
 type PropsType = {
   el: PersonType;
 };
 
 const CardDev: FC<PropsType> = ({ el }) => {
+  const [isImg, setIsImg] = useState(false);
+
   return (
-    <div className="w-full grid grid-cols-1 justify-items-center gap-[32px]">
+    <div className="w-full grid grid-cols-1 justify-items-center gap-[32px] relative">
       {/* IMG */}
       <div className="w-full max-w-[300px] rounded-[12px] overflow-hidden h-[350px]">
+        {isImg ? (
+          <img
+            src={el.img}
+            width={"100%"}
+            height={"100%"}
+            alt={`img of ${el.name}`}
+            className="object-cover w-full h-full object-top"
+          />
+        ) : (
+          <SkeletonImg />
+        )}
         <img
           src={el.img}
-          alt={`img of ${el.name}`}
-          className="object-cover w-full h-full object-top"
+          alt=""
+          className="absolute opacity-0"
+          onLoad={() => setIsImg(true)}
         />
       </div>
       {/* NAME */}
