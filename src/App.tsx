@@ -1,5 +1,7 @@
 import type { FC } from "react";
 import Header from "./components/Header";
+import { people } from "./config/fieldsData";
+import CardDev from "./components/CardDev";
 
 const App: FC = () => {
   return (
@@ -8,6 +10,11 @@ const App: FC = () => {
         {/* HEADER */}
         <Header />
         {/* CONTENT */}
+        <div className="w-full grid grid-cols-4 gap-[25px]">
+          {people.map((el) => (
+            <CardDev key={el.id} {...{ el }} />
+          ))}
+        </div>
       </div>
     </div>
   );
